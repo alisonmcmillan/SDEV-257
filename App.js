@@ -1,25 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, SafeAreaView, StyleSheet } from 'react-native';
+
+// You can import supported modules from npm
+import { Card } from 'react-native-paper';
+
+// or any files within the Snack
+import AssetExample from './components/AssetExample';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.paragraph}>
         Hi, my name is Alison McMillan, and I am a mobile developer
       </Text>
-      <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+    padding: 8,
   },
-  text:{
-    fontWeight: "bold",
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
+  text: {
+   fontWeight: "bold",
+  },
 });
